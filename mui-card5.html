@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+		<title>index</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="css/mui.css" />
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="css/icons-extra.css" />
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<style type="text/css">
+			.mui-icon-extra-heart,.mui-icon-star,.mui-icon-email{
+				color: #666;
+			}
+			.mui-icon-extra-heart-filled{
+				color: #F52D6C;
+			}
+			.mui-icon-star-filled{
+				color: #f52d6c;
+			}
+			.mui-content{
+				margin-top: 50px;
+			}
+			.mui-card .mui-control-content {
+				padding: 10px;
+			}
+			.mui-control-content {
+				height: 150px;
+			}
+			.mui-icon-location{
+				font-size: 14px;
+			}
+			.mui-comment-header{
+				border-bottom: none;	
+			}
+			.mui-comment-header img{
+				border-radius: 50%;
+			}
+			.mui-comment-content-inner{
+				padding: 10px 15px 15px 40px;
+			}
+			div #item1 .mui-scroll-wrappe{
+				height: 800px;
+			}
+			.mui-Collection-body{
+				padding-top: 10px;
+			}
+			.mui-btn-danger{
+				width: 100%;
+				background: #F52D6C;
+			}
+			.footer{
+				width: 100%;
+				height: 44px;
+				bottom: 0;
+				background: #F52D6C;
+				position: fixed;
+			}
+			.footer a{
+				margin: 0 auto;
+				
+				line-height: 44px;
+			}
+			.mui-btn-outlined{
+				width: 100%;
+				color: #fff;
+				border: none;
+			}
+			.comment_text{
+				width: 80%;
+				height: 40px;
+				margin: 2px 1% 2px 1%;
+			}
+			.comment{
+				display: block;
+				float: right;
+				width: 18%;
+				text-align: center;
+				line-height: 44px;
+				color: #fff;
+			}
+		</style>
+</head>
+<body>	
+	<div class="top-bar"></div>
+	<div class="header mui-navbar-inner mui-bar">
+		<h1 id="title" class="mui-title">正文</h1>
+		<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+			<span class="mui-icon mui-icon-left-nav"></span>
+		</button>
+	</div>
+	<div class="mui-content">
+		<div id="mui-card1" class="mui-card">
+				<div class="mui-card-header mui-card-media">
+					<img src="img/index/muwu.jpg" />
+					<div class="mui-media-body">
+						美嘶佳
+						<p><span class="mui-icon mui-icon-location"></span>广州 2017-05-23 16:23 </p>
+					</div>
+				</div>
+				<div class="mui-card-content-inner">
+						这才是章鱼小丸子啊～
+				</div>
+				<div class="mui-card-content" >
+					<img src="img/mui-card/mui-card5-1.jpg" alt="" width="100%" data-preview-src="" data-preview-group="1"/>
+				</div>
+				<div class="mui-card-content" >
+					<img src="img/mui-card/mui-card5-2.jpg" alt="" width="100%" data-preview-src="" data-preview-group="1"/>
+				</div>
+				<div class="mui-card-content" >
+					<img src="img/mui-card/mui-card5-3.jpg" alt="" width="100%" data-preview-src="" data-preview-group="1"/>
+				</div>	
+		</div>
+		<div  style="padding: 10px 10px 0 10px;background: #fff;">
+					<div id="segmentedControl" class="mui-segmented-control">
+						<a class="mui-control-item mui-active" href="#item1">
+							评论<span class="mui-tab-labela">980</span>
+						</a>
+						<a class="mui-control-item" href="#item2">
+							收藏<span class="mui-tab-labela">320</span>
+						</a>
+						<a class="mui-control-item" href="#item3">
+							赞<span class="mui-tab-labela">1220</span>
+						</a>
+					</div>
+		</div>
+		<div>
+					<div id="item1" class="mui-control-content mui-active">
+						<textarea id="comment" cols="30" rows="10"></textarea>
+						<div class="footer">
+							<textarea class="comment_text" name="store" id="store" cols="30" rows="10"></textarea>
+							<a class="comment" onclick="addInfo()"><b>评论</b></a>
+						</div>
+					</div>
+					<div id="item2" class="mui-control-content">
+						<ul class="mui-table-view"  style="margin-top: 0px;">
+								<div class="mui-card-header mui-card-media mui-comment-header" style="padding-left: 26px;">
+									<img src="img/index/muwu.jpg" />
+									<div class="mui-media-body mui-Collection-body">
+										两只冰激凌
+									</div>
+								</div>
+								<div class="mui-card-header mui-card-media mui-comment-header" style="padding-left: 26px;">
+									<img src="img/index/muwu.jpg" />
+									<div class="mui-media-body mui-Collection-body">
+										三只冰激凌
+									</div>
+								</div>
+						</ul>
+					</div>
+					<div id="item3" class="mui-control-content">
+						<ul class="mui-table-view"  style="margin-top: 0px;">
+							<div class="mui-card-header mui-card-media mui-comment-header" style="padding-left: 26px;">
+									<img src="img/index/muwu.jpg" />
+									<div class="mui-media-body mui-Collection-body">
+										一只冰激凌
+									</div>
+								</div>
+								<div class="mui-card-header mui-card-media mui-comment-header" style="padding-left: 26px;">
+									<img src="img/index/muwu.jpg" />
+									<div class="mui-media-body mui-Collection-body">
+										一只冰激凌
+									</div>
+								</div>
+								<div class="mui-card-header mui-card-media mui-comment-header" style="padding-left: 26px;">
+									<img src="img/index/muwu.jpg" />
+									<div class="mui-media-body mui-Collection-body">
+										一只冰激凌
+									</div>
+								</div>
+						</ul>
+					</div>
+				</div>
+	</div>
+<script src="js/mui.js"></script>
+<script src="js/jquery-1.8.3.js"></script>
+<script src="js/mui.zoom.js"></script>
+<script src="js/mui.previewimage.js"></script>
+<script type="text/javascript">
+	mui.previewImage();
+	//定义变量
+    var lStorage = window.localStorage,     //获取localStorage对象
+        info = document.getElementById('store'),
+        show = document.getElementById('comment');
+    //存储留言
+    function addInfo(){
+        var date = new Date();
+        //自定义key,名字myBoard
+        if(lStorage.myBoard){   //判断是否有myBoard键
+            lStorage.myBoard += '\n柚子乌拉拉：'+info.value+'\n'+date.toLocaleString()+'\n';//将时间转换成本地字符串正常显示
+        }else { //第一次存储/localStorage为空时
+            lStorage.myBoard = '\n柚子乌拉拉：'+info.value+'\n'+date.toLocaleString()+'\n';
+        }
+        updateInfo();//每次留言调用显示函数
+    }
+    //更新/查看留言，显示在页面中
+    function updateInfo(){
+        if(lStorage.myBoard){
+            show.value = lStorage.myBoard;
+        }else {
+            show.value = '暂时没有留言。'
+        }
+    }
+  
+</script>		
+</body>
+</html>

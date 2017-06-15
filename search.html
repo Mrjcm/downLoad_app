@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+		<title>massage</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="css/mui.css" />
+		<link rel="stylesheet" href="css/icons-extra.css" />
+		<style>
+			.mui-top{
+				height: 20px;
+				background: #000;
+			}
+			.mui-search{
+				background: #000;
+			}
+			.mui-search input[type='search']{
+				width: 87%;
+				background: #fff;
+			}
+			.history{
+				width: 100%;
+				height: 44px;
+				line-height: 44px;
+				color: #000;
+				font-size: 18px;
+				margin-top: 10px;
+				padding-left: 20px;
+				border-bottom: 1px solid #e4e3e3;
+			}
+			.text-his{
+				margin-top: 15px;
+				padding-bottom: 10px;
+				font-size: 16px;
+			}
+		</style>
+</head>
+<body>
+	<div class="mui-content">
+		<div class="mui-top"></div>
+		<div class="mui-input-row mui-search">
+			<input type="search"  placeholder="">
+			<span id="cancel" style="margin-left: 5px;color: #fff;">取消</span>
+		</div>
+		<div style="background: #fff;margin-top: -7px;">
+			<p class="history">历史记录<span class="del" style="float: right;margin-right: 25px;color: #f00;font-size: 18px;">清空</span></p>	
+			<ul style="padding-left: 20px;">
+				<li class="text-his" style="list-style: none;">婺源-中国最美山村<span class="mui-icon mui-icon-trash" style="float: right;margin-right: 25px;"></span></li>
+				<li class="text-his" style="list-style: none;">美食基地<span class="mui-icon mui-icon-trash" style="float: right;margin-right: 25px;"></span></li>
+				<li class="text-his" style="list-style: none;">旅游随拍<span class="mui-icon mui-icon-trash" style="float: right;margin-right: 25px;"></span></li>
+			</ul>
+		</div>
+		<div style="background: #fff;margin-top: -7px;">
+			<p class="history">热门搜素</p>	
+			<ul style="padding-left: 20px;">
+				<li class="text-his" id="down1" style="list-style: none;"><span class="mui-badge mui-badge-primary" style="background: #f00;">1</span>&nbsp;&nbsp;婺源-中国最美山村</li>
+				<li class="text-his" style="list-style: none;"><span class="mui-badge mui-badge-primary" style="background: #f99237;">2</span>&nbsp;&nbsp;美食基地</li>
+				<li class="text-his" style="list-style: none;"><span class="mui-badge mui-badge-primary" style="background: #3d9a0f">3</span>&nbsp;&nbsp;旅游随拍</li>
+				<li class="text-his" style="list-style: none;"><span class="mui-badge mui-badge-primary" style="background: #561fd8">4</span>&nbsp;&nbsp;美食基地</li>
+				<li class="text-his" style="list-style: none;"><span class="mui-badge mui-badge-primary" style="background: #d965e0">5</span>&nbsp;&nbsp;旅游随拍</li>
+			</ul>
+		</div>
+	</div>	
+<script src="js/mui.js"></script>
+<script src="js/jquery-1.8.3.js"></script>
+<script>
+	//取消
+	document.getElementById('cancel').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'index-find.html', //目标页面的url
+					show:{
+						aniShow:'zoom-out',//zoom-out
+						duration:0
+					},
+					waiting:{
+						autoShow:false
+					}
+				})
+		})
+	//清空
+	$('.del').click(function(){
+		var elem = this;
+		var li = elem.parentNode.parentNode;
+		li.parentNode.removeChild(li);
+	})
+	//删除mui-icon-trash
+	$('.mui-icon-trash').click(function(){
+		
+		$(this).parent().remove();
+	})
+	//链接1
+	document.getElementById('down1').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'down1.html', //目标页面的url
+					show:{
+						aniShow:'zoom-out',//zoom-out
+						duration:0
+					},
+					waiting:{
+						autoShow:false
+					}
+				})
+	})
+</script>
+</body>
+</html>

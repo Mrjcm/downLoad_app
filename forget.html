@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+		<title>forget</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="css/mui.css" />
+		<link rel="stylesheet" type="text/css" href="css/login.css"/>
+</head>
+<body>
+	<div class="top-bar"></div>
+	<div class="header mui-navbar-inner mui-bar">
+		<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+			<span class="mui-icon mui-icon-left-nav"></span>
+		</button>
+		<h1 id="title" class="mui-title">忘记密码</h1>
+	</div>
+	<div class="mui-content">
+		<div class="login-box">
+			<div class="mui-input-row">
+				<lable><span class="mui-icon mui-icon-phone"></span></lable> 
+				<input class="text" type="text" placeholder="手机号" class="mui-input-clear">
+			</div>
+			<div class="mui-input-row">
+				<lable><span class="mui-icon mui-icon-reload"></span></lable> 
+				<input class="text" type="text" placeholder="验证码" class="mui-input-clear">
+				<button class="checked">获取验证码</button>
+			</div>
+			<div class="mui-input-row">
+				<lable><span class="mui-icon mui-icon-locked"></span></lable>
+				<input class="text" type="text" placeholder="新密码" class="mui-input-clear">
+			</div>
+			<div class="btn">
+				<input id='index' type="submit" value="注册" />
+			</div>
+		</div>
+	</div>	
+<script src="js/mui.js"></script>
+<script type="text/javascript">
+			mui.init({
+				swipeBack:true //启用右滑关闭功能
+			});
+			document.getElementById('index').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'index.html', //目标页面的url
+					show:{
+						aniShow:'zoom-in',//zoom-out
+						duration:500
+					},
+					waiting:{
+						autoShow:false
+					}
+				})
+			})
+		</script>		
+</body>
+</html>

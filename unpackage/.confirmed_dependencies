@@ -1,0 +1,177 @@
+{
+  "text.html": {
+    "resources": [
+      "js/mui.js",
+      "css/mui.css"
+    ]
+  },
+  "index.html": {
+    "resources": [
+      "img/mui-card/user-icon4.jpg",
+      "img/mui-card/mui-card3-3.jpg",
+      "img/mui-card/user-icon5.jpg",
+      "img/mui-card/mui-card5-1.jpg",
+      "fonts/mui.ttf",
+      "img/mui-card/user-icon6.jpg",
+      "img/mui-card/user-icon3.jpg",
+      "css/mui.css",
+      "css/icons-extra.css",
+      "css/index.css",
+      "fonts/mui-icons-extra.ttf",
+      "js/mui.zoom.js",
+      "img/index/muwu.jpg",
+      "img/mui-card/user-icon1.jpg",
+      "img/mui-card/mui-card4-1.jpg",
+      "css/iconfont.css",
+      "js/mui.previewimage.js",
+      "js/mui.js",
+      "img/mui-card/user-icon2.jpg",
+      "img/mui-card/mui-card6-1.jpg",
+      "js/jquery-1.8.3.js",
+      "img/mui-card/mui-card2-3.jpg",
+      "img/logo.png"
+    ],
+    "refer": [
+      "mui-card1.html",
+      "mui-card2.html",
+      "index-find.html"
+    ]
+  },
+  "mui-card1.html": {
+    "resources": [
+      "img/mui-card/mui-card1-1.jpg",
+      "css/index.css",
+      "css/iconfont.css",
+      "js/mui.js",
+      "css/mui.css",
+      "css/icons-extra.css",
+      "js/mui.zoom.js",
+      "js/mui.previewimage.js",
+      "js/jquery-1.8.3.js"
+    ]
+  },
+  "mui-card2.html": {
+    "resources": [
+      "css/index.css",
+      "js/mui.zoom.js",
+      "img/mui-card/mui-card2-2.jpg",
+      "css/iconfont.css",
+      "js/mui.previewimage.js",
+      "js/mui.js",
+      "css/mui.css",
+      "css/icons-extra.css"
+    ]
+  },
+  "index-mine.html": {
+    "resources": [
+      "img/mine/top-bar.png",
+      "img/mine/icon-img.png",
+      "js/mui.js",
+      "css/mui.css",
+      "css/icons-extra.css"
+    ],
+    "refer": [
+      "setting.html",
+      "member.html",
+      "massage.html",
+      "comment.html"
+    ]
+  },
+  "index-find.html": {
+    "resources": [
+      "img/public/miao2.jpg",
+      "img/mui-card/mui-card6-2.jpg",
+      "img/mui-card/mui-card5-2.jpg",
+      "img/public/miao3.jpg",
+      "img/mui-card/mui-card7-1l.jpg",
+      "img/public/addbar2.jpg",
+      "img/public/addbar3.jpg",
+      "css/mui.css",
+      "css/icons-extra.css",
+      "img/public/addbar1.jpg",
+      "img/public/miao1.jpg",
+      "img/mui-card/mui-card1-1.jpg",
+      "img/mui-card/mui-card6-4.jpg",
+      "img/mui-card/mui-card3-2.jpg",
+      "img/public/addbar4.jpg",
+      "js/mui.js",
+      "js/jquery-1.8.3.js",
+      "img/mui-card/mui-card6-3.jpg",
+      "img/mui-card/mui-card1-3.jpg",
+      "img/mui-card/mui-card2-2.jpg"
+    ],
+    "refer": [
+      "index-mine.html",
+      "index.html",
+      "search.html"
+    ]
+  },
+  "search.html": {
+    "resources": [
+      "js/mui.js",
+      "js/jquery-1.8.3.js",
+      "css/mui.css",
+      "css/icons-extra.css"
+    ],
+    "refer": [
+      "down1.html"
+    ]
+  },
+  "down1.html": {
+    "resources": [
+      "css/index.css",
+      "js/mui.zoom.js",
+      "css/iconfont.css",
+      "js/mui.previewimage.js",
+      "css/mui.css",
+      "css/icons-extra.css",
+      "js/mui.js"
+    ]
+  },
+  "setting.html": {
+    "resources": [
+      "css/feedback.css",
+      "js/mui.js",
+      "css/mui.css",
+      "js/mui.view.js"
+    ]
+  },
+  "member.html": {
+    "resources": [
+      "css/index.css",
+      "css/iconfont.css",
+      "js/mui.js",
+      "css/mui.css",
+      "css/icons-extra.css"
+    ]
+  },
+  "massage.html": {
+    "resources": [
+      "js/mui.js",
+      "js/jquery-1.8.3.js",
+      "css/mui.css",
+      "css/icons-extra.css"
+    ],
+    "refer": [
+      "chat.html"
+    ]
+  },
+  "chat.html": {
+    "resources": [
+      "js/mui.imageViewer.js",
+      "css/app.css",
+      "js/mui.js",
+      "css/mui.imageviewer.css",
+      "css/mui.css",
+      "js/arttmpl.js"
+    ]
+  },
+  "comment.html": {
+    "resources": [
+      "js/mui.js",
+      "js/jquery-1.8.3.js",
+      "css/mui.css",
+      "css/icons-extra.css"
+    ]
+  }
+}

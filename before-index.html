@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>before-index</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="css/mui.css" />
+		<style>
+			body{
+				background: url(img/index-bg.png);
+				background-size: cover;
+			}
+			.img{
+				width: 100%;
+				padding: 80px 70px 10px;
+			}
+			.border{
+				width: 100%;
+				height: 44px;
+				display: flex;
+				padding: 30px 40px 20px 40px;
+			}
+			.border li{
+				flex: 1;
+				list-style: none;
+				color: #439cfb;
+				text-align: center;
+			}
+			.bor{
+				margin-top: 10px;
+				border-top: 1px solid #f52d6c;
+			}
+			.btn{
+				position: absolute;
+				width: 300px;
+				left: 50%;
+				margin-left: -150px;
+				margin-top: 20px;
+			}
+			input[type=submit]{
+				width: 100%;
+				height: 44px;
+				background: #439cfb;
+				border:1px solid #439cfb;
+				border-radius: 25px;
+				font-size: 18px;
+			}
+			.company{
+				position: fixed;
+				width: 100%;
+				height: 30px;
+				bottom: 10px;
+				font-size: 16px;
+				color: #5eafff;
+				text-align: center;
+				
+			}
+			.footer{
+				width: 100%;
+				height: 120px;
+				position: fixed;
+				bottom: 10px;
+				background: rgba(255,255,255,.3);
+			}
+			.footer p{
+				width: 100%;
+				margin-top: 60px;
+				color: #ef92af;
+				font-size: 20px;
+				text-align: center;
+			}
+		@media(min-width: 768px){
+    		body{
+				background: url(img/index-bg.png);
+				font-size: 38px;
+    		}
+    		.img{
+				width: 100%;
+				padding: 80px 150px 30px;
+			}
+			.btn{
+				position: absolute;
+				width: 600px;
+				left: 50%;
+				margin-left: -300px;
+				margin-top: 50px;
+			}
+			input[type=submit]{
+				height: 60px;
+				font-size: 30px;
+			}
+			.footer{
+				text-align: center;
+				height: 160px;
+			}
+			.footer p{
+				width: 100%;
+				text-align: center;
+			}
+		}
+		</style>
+	</head>
+	<body>  
+		<div class="img">
+			<img src="img/logo.png" width="100%"/>
+		</div>
+			<ul class="border">
+				<li class="bor"></li>
+				<li>&nbsp;方便&nbsp;<b>·</b>&nbsp;快捷&nbsp;</li>
+				<li class="bor"></li>
+			</ul>
+			<div class="btn">
+				<input id='login' type="submit" value="登录&nbsp;&nbsp;/&nbsp;&nbsp;注册" />
+			</div>
+			<div id="footer" class="footer">
+				<p>随便逛逛 →</p>
+			</div>
+		<script src="js/mui.js"></script>
+		<script type="text/javascript">
+			mui.init({
+				swipeBack:true //启用右滑关闭功能
+			});
+			//首页
+			document.getElementById('footer').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'index.html', //目标页面的url
+					show:{
+						aniShow:'zoom-out',//zoom-out
+						duration:200
+					},
+					waiting:{
+						autoShow:false
+					}
+				})
+			})
+			//登录注册
+			document.getElementById('login').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'login.html', //目标页面的url
+					show:{
+						aniShow:'zoom-out',//zoom-out
+						duration:200
+					},
+					waiting:{
+						autoShow:false
+					}
+				})
+			})
+		</script>
+	</body>
+</html>

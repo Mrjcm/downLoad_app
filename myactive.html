@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+		<title>Privacy</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="css/mui.css" />
+		<link rel="stylesheet" href="css/icons-extra.css" />
+		<style>
+			.mui-icon-extra-heart,.mui-icon-star,.mui-icon-email,.mui-tab-labela{
+				color: #666;
+			}
+			.mui-icon-extra-heart-filled{
+				color: #F52D6C;
+			}
+			.mui-icon-star-filled{
+				color: #f52d6c;
+			}
+			.mui-content{
+				margin-top: 50px;
+			}
+			.mui-icon-location{
+				font-size: 14px;
+			}
+		</style>
+</head>
+<body>
+	<div class="top-bar"></div>
+	<div class="header mui-navbar-inner mui-bar">
+		<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+			<span class="mui-icon mui-icon-left-nav"></span>
+		</button>
+		<h1 class="mui-center mui-title">柚子乌拉拉</h1>
+	</div>
+	<div class="mui-content">
+		<div class="mui-card">
+				<div class="mui-card-header mui-card-media">
+					<img src="img/index/muwu.jpg" />
+					<div class="mui-media-body">
+						柚子
+						<p><span class="mui-icon mui-icon-location"></span>成都 2017-05-23 15:30 </p>
+					</div>
+				</div>
+				<div id="mui-card1">
+					<div class="mui-card-content" >
+					<img src="img/index/muwu.jpg" alt="" width="100%"/>
+				</div>
+				</div>
+				<div class="mui-card-footer mui-bar">
+					<a class="footer-li"><span class="heart mui-icon-extra mui-icon-extra-heart"></span><span class="mui-tab-labela">1220</span></a>
+					<a class="footer-li"><span class="mui-icon mui-icon-email"></span><span class="mui-tab-labela">980</span></a>
+					<a class="footer-li"><span class="star mui-icon mui-icon-star"></span><span class="mui-tab-labela">320</span></a>
+				</div>
+		</div>
+		
+		<div class="mui-card">
+				<div class="mui-card-header mui-card-media">
+					<img src="img/index/muwu.jpg" />
+					<div class="mui-media-body">
+						柚子
+						<p><span class="mui-icon mui-icon-location"></span>成都 2017-05-23 15:30 </p>
+					</div>
+				</div>
+				<div id="mui-card1">
+					<div class="mui-card-content" >
+					<img src="img/index/muwu.jpg" alt="" width="100%"/>
+				</div>
+				</div>
+				<div class="mui-card-footer mui-bar">
+					<a class="footer-li"><span class="heart mui-icon-extra mui-icon-extra-heart"></span><span class="mui-tab-labela">1220</span></a>
+					<a class="footer-li"><span class="mui-icon mui-icon-email"></span><span class="mui-tab-labela">980</span></a>
+					<a class="footer-li"><span class="star mui-icon mui-icon-star"></span><span class="mui-tab-labela">320</span></a>
+				</div>
+		</div>
+		
+	</div>	
+<script src="js/mui.js"></script>
+<script src="js/jquery-1.8.3.js"></script>
+<script type="text/javascript">
+			//js点赞变色
+			$('.heart').toggle(function(){
+				$(this).removeClass('mui-icon-extra-heart');
+			    $(this).addClass('mui-icon-extra-heart-filled');
+			},function(){
+			    	$(this).removeClass('mui-icon-extra-heart-filled');
+			    	$(this).addClass('mui-icon-extra-heart');
+			});
+			//js收藏变色
+			$('.star').toggle(function(){
+				$(this).removeClass('mui-icon-star');
+			    $(this).addClass('mui-icon-star-filled');
+			},function(){
+			    	$(this).removeClass('mui-icon-star-filled');
+			    	$(this).addClass('mui-icon-star');
+			});		
+</body>
+</html>

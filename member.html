@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+		<title>index</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="css/mui.css" />
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="css/icons-extra.css" />
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<style type="text/css">
+			.mui-content{
+				margin-top: 54px;
+			}
+			.mui-table-view-cell img{
+				border-radius: 50%;
+			}
+			.mui-card-footer{
+				width: 100%;
+				height: 44px;
+				bottom: 0;
+				background: #f52d6c;
+				position: fixed;
+			}
+			.mui-card-footer a{
+				margin: 0 auto;
+				color: #fff;
+			}
+		</style>
+</head>
+<body>	
+	<div class="top-bar"></div>
+	<div class="header mui-navbar-inner mui-bar">
+		<h1 id="title" class="mui-title">会员中心</h1>
+		<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+			<span class="mui-icon mui-icon-left-nav"></span>
+		</button>
+	</div>
+	<div class="mui-content">
+		<ul class="mui-table-view">
+			<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="img/mine/icon-img.png">
+						<div class="mui-media-body">
+							柚子乌拉拉
+							<p class='mui-ellipsis' style="color: #e6ab5e;">普通用户</p>
+						</div>
+					</a>
+			</li>
+		</ul>
+		<p style="padding-left: 30px;line-height: 40px;font-size: 18px;">会员套餐</p>
+		<ul class="mui-table-view mui-table-view-radio" style="margin-top: -10px;">
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+						12个月<span style="color: #F52D6C;">118</span>元
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-selected">
+					<a class="mui-navigate-right">
+						6个月<span style="color: #F52D6C;">60</span>元
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+						3个月<span style="color: #F52D6C;">30</span>元
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+						1个月<span style="color: #F52D6C;">12</span>元
+					</a>
+				</li>
+			</ul>
+			<div style="padding-left: 10px;padding-top: 10px;">开通会员，下载更多高清素材！</div>
+	</div>
+	<div id="open" class="mui-card-footer mui-bar">
+		<a>立即开通</a>
+	</div>
+<script src="js/mui.js"></script>
+<script type="text/javascript">	
+	document.getElementById("open").addEventListener('tap', function() {
+				var btnArray = ['取消', '确认'];
+				mui.confirm('确认支付开通费用？', '开通会员', btnArray, function(e) {
+					if (e.index == 1) {
+						mui.openWindow({
+							url:'index-mine.html', //目标页面的url
+							show:{
+								aniShow:'zoom-out',//zoom-out
+								duration:0
+							}
+						})
+					}
+				})
+			});
+</script>		
+</body>
+</html>

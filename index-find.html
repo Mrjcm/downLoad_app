@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="css/mui.css">
+		<link rel="stylesheet" href="css/icons-extra.css" />
+		<style>
+			html,
+			body {
+				background-color: #efeff4;
+			}
+			.mui-content{
+				margin-top: 62px;
+			}
+			.mui-search{
+				margin-top: 10px;
+				margin-bottom: -24px;
+				background: #fff;
+			}
+			.mui-bar~.mui-content .mui-fullscreen {
+				top: 44px;
+				height: auto;
+			}
+			.mui-pull-top-tips {
+				position: absolute;
+				top: -20px;
+				left: 50%;
+				margin-left: -25px;
+				width: 40px;
+				height: 40px;
+				border-radius: 100%;
+				z-index: 1;
+			}
+			.mui-bar~.mui-pull-top-tips {
+				top: 24px;
+			}
+			.mui-pull-top-wrapper {
+				width: 42px;
+				height: 42px;
+				display: block;
+				text-align: center;
+				background-color: #efeff4;
+				border: 1px solid #ddd;
+				border-radius: 25px;
+				background-clip: padding-box;
+				box-shadow: 0 4px 10px #bbb;
+				overflow: hidden;
+			}
+			.mui-pull-top-tips.mui-transitioning {
+				-webkit-transition-duration: 200ms;
+				transition-duration: 200ms;
+			}
+			.mui-pull-top-tips .mui-pull-loading {
+				/*-webkit-backface-visibility: hidden;
+				-webkit-transition-duration: 400ms;
+				transition-duration: 400ms;*/
+				
+				margin: 0;
+			}
+			.mui-pull-top-wrapper .mui-icon,
+			.mui-pull-top-wrapper .mui-spinner {
+				margin-top: 7px;
+			}
+			.mui-pull-top-wrapper .mui-icon.mui-reverse {
+				/*-webkit-transform: rotate(180deg) translateZ(0);*/
+			}
+			.mui-pull-bottom-tips {
+				text-align: center;
+				background-color: #efeff4;
+				font-size: 15px;
+				line-height: 40px;
+				color: #777;
+			}
+			.mui-pull-top-canvas {
+				overflow: hidden;
+				background-color: #fafafa;
+				border-radius: 40px;
+				box-shadow: 0 4px 10px #bbb;
+				width: 40px;
+				height: 40px;
+				margin: 0 auto;
+			}
+			.mui-pull-top-canvas canvas {
+				width: 40px;
+			}
+			.mui-slider-indicator.mui-segmented-control {
+				background-color: #efeff4;
+				margin-top: 8px;
+			}
+			/*mui-card*/
+			.mui-icon-extra-heart,.mui-icon-star,.mui-icon-email,.mui-tab-labela{
+				color: #666;
+			}
+			.mui-icon-extra-heart-filled{
+				color: #F52D6C;
+			}
+			.mui-icon-star-filled{
+				color: #f52d6c;
+			}
+			.mui-icon-location{
+				font-size: 14px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="top-bar"></div>
+		<div class="header mui-navbar-inner mui-bar">
+			<h1 id="title" class="mui-title">发现</h1>
+		</div>
+		<div class="mui-content">
+				<!--图片轮播-->
+				<div id="slider" class="mui-slider" style="height: 200px;">
+					<div class="mui-slider-group mui-slider-loop">
+						<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+						<div class="mui-slider-item mui-slider-item-duplicate">
+							<a>
+								<img src="img/public/addbar4.jpg">
+							</a>
+						</div>
+						<!-- 第一张 -->
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="img/public/addbar1.jpg">
+							</a>
+						</div>
+						<!-- 第二张 -->
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="img/public/addbar2.jpg">
+							</a>
+						</div>
+						<!-- 第三张 -->
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="img/public/addbar3.jpg">
+							</a>
+						</div>
+						<!-- 第四张 -->
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="img/public/addbar4.jpg">
+							</a>
+						</div>
+						<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+						<div class="mui-slider-item mui-slider-item-duplicate">
+							<a href="#">
+								<img src="img/public/addbar1.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="mui-slider-indicator">
+						<div class="mui-indicator mui-active"></div>
+						<div class="mui-indicator"></div>
+						<div class="mui-indicator"></div>
+						<div class="mui-indicator"></div>
+					</div>
+				</div>
+				<!--搜索-->
+				<div class="mui-input-row mui-search">
+					<input id="search" type="search" class="mui-input-clear" placeholder="">
+				</div>
+				<div id="sliderSegmentedControl" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+					<div class="mui-scroll">
+						<a class="mui-control-item mui-active" href="#item1mobile">
+							热点
+						</a>
+						<a class="mui-control-item" href="#item2mobile">
+							宠物
+						</a>
+						<a class="mui-control-item" href="#item3mobile">
+							旅游
+						</a>
+						<a class="mui-control-item" href="#item4mobile">
+							美食
+						</a>
+						<a class="mui-control-item" href="#item5mobile">
+							摄影
+						</a>
+						<a class="mui-control-item" href="#item6mobile">
+							矢量
+						</a>
+					</div>
+				</div>
+				<div class="mui-slider-group">
+					<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+						<div class="tab-card">
+							<h5 style="background-color:#efeff4;border-top: 5px solid #fff;padding-left: 20px;line-height: 25px;">慢生活 >></h5>
+						    <ul class="mui-table-view mui-grid-view">
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a>
+						                <img class="mui-media-object" src="img/mui-card/mui-card1-1.jpg">
+						                <div class="mui-media-body">静谧</div></a></li>
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a>
+						                <img class="mui-media-object" src="img/mui-card/mui-card1-3.jpg">
+						                <div class="mui-media-body">想要一间这样的木屋，静静的喝咖啡</div></a></li>
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a><img class="mui-media-object" src="img/mui-card/mui-card7-1l.jpg">
+						                <div class="mui-media-body">Color of SIP CBD</div></a></li>
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a>
+						                <img class="mui-media-object" src="img/mui-card/mui-card2-2.jpg">
+						                <div class="mui-media-body">静静看这世界</div></a></li>
+						    </ul>  
+						</div>
+						
+						<div class="tab-card">
+							<h5 style="background-color:#efeff4;border-top: 5px solid #fff;padding-left: 20px;line-height: 25px;">慢生活 >></h5>
+						    <ul class="mui-table-view mui-grid-view">
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a>
+						                <img class="mui-media-object" src="img/mui-card/mui-card1-1.jpg">
+						                <div class="mui-media-body">静谧</div></a></li>
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a>
+						                <img class="mui-media-object" src="img/mui-card/mui-card1-3.jpg">
+						                <div class="mui-media-body">想要一间这样的木屋，静静的喝咖啡</div></a></li>
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a><img class="mui-media-object" src="img/mui-card/mui-card7-1l.jpg">
+						                <div class="mui-media-body">Color of SIP CBD</div></a></li>
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a>
+						                <img class="mui-media-object" src="img/mui-card/mui-card2-2.jpg">
+						                <div class="mui-media-body">静静看这世界</div></a></li>
+						    </ul>  
+						</div>
+						
+						<div class="tab-card">
+							<h5 style="background-color:#efeff4;border-top: 5px solid #fff;padding-left: 20px;line-height: 25px;">慢生活 >></h5>
+						    <ul class="mui-table-view mui-grid-view">
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a>
+						                <img class="mui-media-object" src="img/mui-card/mui-card1-1.jpg">
+						                <div class="mui-media-body">静谧</div></a></li>
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a>
+						                <img class="mui-media-object" src="img/mui-card/mui-card1-3.jpg">
+						                <div class="mui-media-body">想要一间这样的木屋，静静的喝咖啡</div></a></li>
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a><img class="mui-media-object" src="img/mui-card/mui-card7-1l.jpg">
+						                <div class="mui-media-body">Color of SIP CBD</div></a></li>
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a>
+						                <img class="mui-media-object" src="img/mui-card/mui-card2-2.jpg">
+						                <div class="mui-media-body">静静看这世界</div></a></li>
+						    </ul>  
+						</div>
+					</div>
+					<div id="item2mobile" class="mui-slider-item mui-control-content">
+						<div class="tab-card">
+							<h5 style="background-color:#efeff4;border-top: 5px solid #fff;padding-left: 20px;line-height: 25px;">日常吸猫 >></h5>
+						    <ul class="mui-table-view mui-grid-view">
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a>
+						                <img class="mui-media-object" src="img/public/miao1.jpg">
+						                <div class="mui-media-body">静谧</div></a></li>
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a>
+						                <img class="mui-media-object" src="img/public/miao2.jpg">
+						                <div class="mui-media-body">想要一间这样的木屋，静静的喝咖啡</div></a></li>
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a><img class="mui-media-object" src="img/public/miao3.jpg">
+						                <div class="mui-media-body">Color of SIP CBD</div></a></li>
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a>
+						                <img class="mui-media-object" src="img/mui-card/mui-card4-1.jpg">
+						                <div class="mui-media-body">静静看这世界</div></a></li>
+						    </ul>  
+						</div>
+						
+						<div class="tab-card">
+							<h5 style="background-color:#efeff4;border-top: 5px solid #fff;padding-left: 20px;line-height: 25px;">愚王二哈 >></h5>
+						    <ul class="mui-table-view mui-grid-view">
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a>
+						                <img class="mui-media-object" src="img/mui-card/mui-card3-3.jpg">
+						                <div class="mui-media-body">静谧</div></a></li>
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a>
+						                <img class="mui-media-object" src="img/mui-card/mui-card3-2.jpg">
+						                <div class="mui-media-body">想要一间这样的木屋，静静的喝咖啡</div></a></li>
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a><img class="mui-media-object" src="img/public/miao3.jpg">
+						                <div class="mui-media-body">Color of SIP CBD</div></a></li>
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a>
+						                <img class="mui-media-object" src="img/mui-card/mui-card4-1.jpg">
+						                <div class="mui-media-body">静静看这世界</div></a></li>
+						    </ul>  
+						</div>
+						
+						
+					</div>
+					<div id="item3mobile" class="mui-slider-item mui-control-content">
+						<div class="tab-card">
+							<h5 style="background-color:#efeff4;border-top: 5px solid #fff;padding-left: 20px;line-height: 25px;">极限之旅 >></h5>
+						    <ul class="mui-table-view mui-grid-view">
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a>
+						                <img class="mui-media-object" src="img/mui-card/mui-card2-2.jpg">
+						                <div class="mui-media-body">静谧</div></a></li>
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a>
+						                <img class="mui-media-object" src="img/mui-card/mui-card2-3.jpg">
+						                <div class="mui-media-body">想要一间这样的木屋，静静的喝咖啡</div></a></li>
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a><img class="mui-media-object" src="img/public/miao3.jpg">
+						                <div class="mui-media-body">Color of SIP CBD</div></a></li>
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a>
+						                <img class="mui-media-object" src="img/mui-card/mui-card4-1.jpg">
+						                <div class="mui-media-body">静静看这世界</div></a></li>
+						    </ul>  
+						</div>
+						<div class="tab-card">
+							<h5 style="background-color:#efeff4;border-top: 5px solid #fff;padding-left: 20px;line-height: 25px;">极限之旅 >></h5>
+						    <ul class="mui-table-view mui-grid-view">
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a>
+						                <img class="mui-media-object" src="img/mui-card/mui-card2-2.jpg">
+						                <div class="mui-media-body">静谧</div></a></li>
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a>
+						                <img class="mui-media-object" src="img/mui-card/mui-card2-3.jpg">
+						                <div class="mui-media-body">想要一间这样的木屋，静静的喝咖啡</div></a></li>
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a><img class="mui-media-object" src="img/public/miao3.jpg">
+						                <div class="mui-media-body">Color of SIP CBD</div></a></li>
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a>
+						                <img class="mui-media-object" src="img/mui-card/mui-card4-1.jpg">
+						                <div class="mui-media-body">静静看这世界</div></a></li>
+						    </ul>  
+						</div>
+					</div>
+					<div id="item4mobile" class="mui-slider-item mui-control-content">
+						<div class="tab-card">
+							<h5 style="background-color:#efeff4;border-top: 5px solid #fff;padding-left: 20px;line-height: 25px;">边走边吃 >></h5>
+						    <ul class="mui-table-view mui-grid-view">
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a>
+						                <img class="mui-media-object" src="img/mui-card/mui-card5-2.jpg">
+						                <div class="mui-media-body">静谧</div></a></li>
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a>
+						                <img class="mui-media-object" src="img/mui-card/mui-card5-1.jpg">
+						                <div class="mui-media-body">想要一间这样的木屋，静静的喝咖啡</div></a></li>
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a><img class="mui-media-object" src="img/public/miao3.jpg">
+						                <div class="mui-media-body">Color of SIP CBD</div></a></li>
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a>
+						                <img class="mui-media-object" src="img/mui-card/mui-card4-1.jpg">
+						                <div class="mui-media-body">静静看这世界</div></a></li>
+						    </ul>  
+						</div>
+						<div class="tab-card">
+							<h5 style="background-color:#efeff4;border-top: 5px solid #fff;padding-left: 20px;line-height: 25px;">边走边吃 >></h5>
+						    <ul class="mui-table-view mui-grid-view">
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a>
+						                <img class="mui-media-object" src="img/mui-card/mui-card5-2.jpg">
+						                <div class="mui-media-body">静谧</div></a></li>
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a>
+						                <img class="mui-media-object" src="img/mui-card/mui-card5-1.jpg">
+						                <div class="mui-media-body">想要一间这样的木屋，静静的喝咖啡</div></a></li>
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a><img class="mui-media-object" src="img/public/miao3.jpg">
+						                <div class="mui-media-body">Color of SIP CBD</div></a></li>
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a>
+						                <img class="mui-media-object" src="img/mui-card/mui-card4-1.jpg">
+						                <div class="mui-media-body">静静看这世界</div></a></li>
+						    </ul>  
+						</div>
+						<div class="tab-card">
+							<h5 style="background-color:#efeff4;border-top: 5px solid #fff;padding-left: 20px;line-height: 25px;">边走边吃 >></h5>
+						    <ul class="mui-table-view mui-grid-view">
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a>
+						                <img class="mui-media-object" src="img/mui-card/mui-card5-2.jpg">
+						                <div class="mui-media-body">静谧</div></a></li>
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a>
+						                <img class="mui-media-object" src="img/mui-card/mui-card5-1.jpg">
+						                <div class="mui-media-body">想要一间这样的木屋，静静的喝咖啡</div></a></li>
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a><img class="mui-media-object" src="img/public/miao3.jpg">
+						                <div class="mui-media-body">Color of SIP CBD</div></a></li>
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a>
+						                <img class="mui-media-object" src="img/mui-card/mui-card4-1.jpg">
+						                <div class="mui-media-body">静静看这世界</div></a></li>
+						    </ul>  
+						</div>
+					</div>
+					<div id="item5mobile" class="mui-slider-item mui-control-content">
+						<div class="tab-card">
+							<h5 style="background-color:#efeff4;border-top: 5px solid #fff;padding-left: 20px;line-height: 25px;">微聚焦 >></h5>
+						    <ul class="mui-table-view mui-grid-view">
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a>
+						                <img class="mui-media-object" src="img/mui-card/mui-card6-2.jpg">
+						                <div class="mui-media-body">静谧</div></a></li>
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a>
+						                <img class="mui-media-object" src="img/mui-card/mui-card6-4.jpg">
+						                <div class="mui-media-body">想要一间这样的木屋，静静的喝咖啡</div></a></li>
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a><img class="mui-media-object" src="img/mui-card/mui-card6-3.jpg">
+						                <div class="mui-media-body">Color of SIP CBD</div></a></li>
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a>
+						                <img class="mui-media-object" src="img/mui-card/mui-card6-1.jpg">
+						                <div class="mui-media-body">静静看这世界</div></a></li>
+						    </ul>  
+						</div>
+						<div class="tab-card">
+							<h5 style="background-color:#efeff4;border-top: 5px solid #fff;padding-left: 20px;line-height: 25px;">微聚焦 >></h5>
+						    <ul class="mui-table-view mui-grid-view">
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a>
+						                <img class="mui-media-object" src="img/mui-card/mui-card6-2.jpg">
+						                <div class="mui-media-body">静谧</div></a></li>
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a>
+						                <img class="mui-media-object" src="img/mui-card/mui-card6-4.jpg">
+						                <div class="mui-media-body">想要一间这样的木屋，静静的喝咖啡</div></a></li>
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a><img class="mui-media-object" src="img/mui-card/mui-card6-3.jpg">
+						                <div class="mui-media-body">Color of SIP CBD</div></a></li>
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a>
+						                <img class="mui-media-object" src="img/mui-card/mui-card6-1.jpg">
+						                <div class="mui-media-body">静静看这世界</div></a></li>
+						    </ul>  
+						</div>
+						<div class="tab-card">
+							<h5 style="background-color:#efeff4;border-top: 5px solid #fff;padding-left: 20px;line-height: 25px;">微聚焦 >></h5>
+						    <ul class="mui-table-view mui-grid-view">
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a>
+						                <img class="mui-media-object" src="img/mui-card/mui-card6-2.jpg">
+						                <div class="mui-media-body">静谧</div></a></li>
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a>
+						                <img class="mui-media-object" src="img/mui-card/mui-card6-4.jpg">
+						                <div class="mui-media-body">想要一间这样的木屋，静静的喝咖啡</div></a></li>
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a><img class="mui-media-object" src="img/mui-card/mui-card6-3.jpg">
+						                <div class="mui-media-body">Color of SIP CBD</div></a></li>
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a>
+						                <img class="mui-media-object" src="img/mui-card/mui-card6-1.jpg">
+						                <div class="mui-media-body">静静看这世界</div></a></li>
+						    </ul>  
+						</div>
+					</div>
+					<div id="item6mobile" class="mui-slider-item mui-control-content">
+						<div class="tab-card">
+							<h5 style="background-color:#efeff4;border-top: 5px solid #fff;padding-left: 20px;line-height: 25px;"几何构图>></h5>
+						    <ul class="mui-table-view mui-grid-view">
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a>
+						                <img class="mui-media-object" src="img/mui-card/user-icon3.jpg">
+						                <div class="mui-media-body">静谧</div></a></li>
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a>
+						                <img class="mui-media-object" src="img/mui-card/user-icon6.jpg">
+						                <div class="mui-media-body">想要一间这样的木屋，静静的喝咖啡</div></a></li>
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a><img class="mui-media-object" src="img/mui-card/mui-card6-3.jpg">
+						                <div class="mui-media-body">Color of SIP CBD</div></a></li>
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a>
+						                <img class="mui-media-object" src="img/mui-card/mui-card6-1.jpg">
+						                <div class="mui-media-body">静静看这世界</div></a></li>
+						    </ul>  
+						</div>
+						<div class="tab-card">
+							<h5 style="background-color:#efeff4;border-top: 5px solid #fff;padding-left: 20px;line-height: 25px;"几何构图>></h5>
+						    <ul class="mui-table-view mui-grid-view">
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a>
+						                <img class="mui-media-object" src="img/mui-card/user-icon3.jpg">
+						                <div class="mui-media-body">静谧</div></a></li>
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a>
+						                <img class="mui-media-object" src="img/mui-card/user-icon6.jpg">
+						                <div class="mui-media-body">想要一间这样的木屋，静静的喝咖啡</div></a></li>
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a><img class="mui-media-object" src="img/mui-card/mui-card6-3.jpg">
+						                <div class="mui-media-body">Color of SIP CBD</div></a></li>
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a>
+						                <img class="mui-media-object" src="img/mui-card/mui-card6-1.jpg">
+						                <div class="mui-media-body">静静看这世界</div></a></li>
+						    </ul>  
+						</div>
+						<div class="tab-card">
+							<h5 style="background-color:#efeff4;border-top: 5px solid #fff;padding-left: 20px;line-height: 25px;"几何构图>></h5>
+						    <ul class="mui-table-view mui-grid-view">
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a>
+						                <img class="mui-media-object" src="img/mui-card/user-icon3.jpg">
+						                <div class="mui-media-body">静谧</div></a></li>
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a>
+						                <img class="mui-media-object" src="img/mui-card/user-icon6.jpg">
+						                <div class="mui-media-body">想要一间这样的木屋，静静的喝咖啡</div></a></li>
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a><img class="mui-media-object" src="img/mui-card/mui-card6-3.jpg">
+						                <div class="mui-media-body">Color of SIP CBD</div></a></li>
+						        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+						            <a>
+						                <img class="mui-media-object" src="img/mui-card/mui-card6-1.jpg">
+						                <div class="mui-media-body">静静看这世界</div></a></li>
+						    </ul>  
+						</div>
+					</div>
+				</div>
+
+		</div>
+		<div class="footer mui-bar footer-ul">
+				<a id="index" class="footer-li">
+					<span class="mui-icon mui-icon-home"></span>
+					<span class="mui-tab-label">首页</span>
+				</a>
+				<a id="find" class="footer-li  mui-active">
+					<span class="mui-icon mui-icon-search"></span>
+					<span class="mui-tab-label">发现</span>
+				</a>
+				<a id="mine" class="footer-li">
+					<span class="mui-icon mui-icon-person"></span>
+					<span class="mui-tab-label">我</span>
+				</a>
+			</div>
+		
+		<script src="js/mui.js"></script>
+		<script src="js/jquery-1.8.3.js"></script>
+		<script>
+			mui.init();
+//			轮播
+			var slider = mui("#slider");
+			slider.slider({
+						interval: 5000
+					});			
+			//主页跳转
+			document.getElementById('index').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'index.html', //目标页面的url
+					show:{
+						aniShow:'zoom-in',//zoom-out
+						duration:0
+					},
+					waiting:{
+						autoShow:false
+					}
+				})
+			})
+			document.getElementById('mine').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'index-mine.html', //目标页面的url
+					show:{
+						aniShow:'zoom-in',//zoom-out
+						duration:0
+					},
+					waiting:{
+						autoShow:false
+					}
+				})
+			})
+			//搜素search
+			$('#search').focus(function(){
+					mui.openWindow({
+						url:'search.html', //目标页面的url
+						show:{
+							aniShow:'zoom-out',//zoom-out
+							duration:0
+						},
+						waiting:{
+							autoShow:false
+						}
+					})
+				})
+			//圈子
+			$('.tab-card').click(function(){
+				mui.openWindow({
+						url:'quanzi.html', //目标页面的url
+						show:{
+							aniShow:'slide-in-right',//zoom-out
+							duration:500
+						},
+						waiting:{
+							autoShow:false
+						}
+					})
+			});
+			//js点赞变色
+			$('.heart').toggle(function(){
+				$(this).removeClass('mui-icon-extra-heart');
+			    $(this).addClass('mui-icon-extra-heart-filled');
+			},function(){
+			    	$(this).removeClass('mui-icon-extra-heart-filled');
+			    	$(this).addClass('mui-icon-extra-heart');
+			});
+			//js收藏变色
+			$('.star').toggle(function(){
+				$(this).removeClass('mui-icon-star');
+			    $(this).addClass('mui-icon-star-filled');
+			},function(){
+			    	$(this).removeClass('mui-icon-star-filled');
+			    	$(this).addClass('mui-icon-star');
+			});
+			
+		</script>
+	</body>
+</html>

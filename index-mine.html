@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+		<title>index-mine</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="css/mui.css" />
+		<link rel="stylesheet" href="css/icons-extra.css" />
+		<style type="text/css">
+			.top-bar{
+				height: 227px;
+				overflow: hidden;
+				background: url(img/mine/top-bar.png);
+				background-size: 100%;
+				padding-top: 19px;
+			}
+			.top-bar .header{
+				background: transparent;
+			}	
+			.top-bar .img-icon{
+				z-index: 999;
+				width: 120px;
+				height: 120px;
+				background: #f00;
+				border-radius: 50%;
+				border:2px solid #fff;
+				margin: 20px auto;
+				overflow: hidden;
+			}
+			.img-icon img{
+				margin-left: -100px;
+				margin-top: -20px;
+			}
+			.container{
+				position: absolute;
+				padding-top: 230px;
+			}
+			/*关注 粉丝 下载 收藏*/
+			.con-title{
+				width: 100%;
+				height: 60px;
+				background: #fff;
+			}
+			.con-title a{
+				display: table-cell;
+				height: 60px;
+				width: 1%;
+				text-align: center;
+				vertical-align: middle;
+				font-size: 14px;
+				color: #888;
+			}
+			.con-title a .spans{
+				top: 3px;
+				width: 24px;
+				height: 24px;
+				font-size: 22px;
+			}
+			.con-title a .con-title-label{
+				display: block;
+			}
+			.con-con{
+				width: 100%;
+				margin-top: 15px;
+			}
+			.mui-table-view-cell{
+				padding: 7px 15px;
+			}
+			.con-con .mui-media-body{
+				line-height: 40px;
+			}
+			@media(min-width: 768px){
+				.top-bar{
+					height: 400px;
+				}
+				.top-bar .img-icon{
+					width: 240px;
+					height: 240px;
+					margin: 60px auto;
+				}
+				.img-icon img{
+					margin-left: -190px;
+					margin-top: -40px;
+				}
+				.con-title{
+					height: 80px;
+				}
+				.con-title a{
+					height: 80px;
+					font-size: 18px;
+				}
+				.con-title a .spans{
+					top: 8px;
+					font-size: 24px;
+				}
+				.con-con{
+					margin-top: 20px;
+				}
+				.mui-table-view-cell{
+					padding: 15px 15px;
+				}
+				.con-con .mui-media-body{
+					line-height: 50px;
+				}
+				.con-con .coment{
+					margin-top: 60px;
+				}
+			}	
+		</style>
+</head>
+<body>
+	<div class="top-bar">
+		<div class="header">
+			<a id="setting" class="mui-icon mui-icon-gear mui-pull-right"></a>
+		</div>
+		<div class="img-icon">
+			<img src="img/mine/icon-img.png" alt="" width="200%"/>
+		</div>
+	</div>
+	<div class="container">
+		<div class="con-title">
+			<a id="follow"><span class="mui-icon-extra mui-icon-extra-heart-filled spans"></span><span class="con-title-label">关注</span></a>
+			<a id="fans"><span class="mui-icon-extra mui-icon-extra-peoples spans"></span><span class="con-title-label">粉丝</span></a>
+			<a id="download"><span class="mui-icon mui-icon-download spans"></span><span class="con-title-label">下载</span></a>
+			<a id="collect"><span class="mui-icon mui-icon-star spans"></span><span class="con-title-label">收藏</span></a>
+		</div>
+		<div class="con-con">
+			<ul class="mui-table-view mui-table-view-chevron coment">
+				<li id="member" class="mui-table-view-cell mui-media">
+					<a class="mui-navigate-right">
+						<div class="mui-media-body">
+							<span class="mui-icon-extra mui-icon-extra-gift" style="color: #f52d6c;"></span>&nbsp;&nbsp;会员中心
+						</div>
+					</a>
+				</li>
+			</ul>
+			<ul class="mui-table-view mui-table-view-chevron coment">
+				<li class="mui-table-view-cell mui-media">
+					<a class="mui-navigate-right">
+						<div id="comment" class="mui-media-body">
+							<span class="mui-icon mui-icon-email" style="color: #f52d6c;"></span>&nbsp;&nbsp;评论
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a class='mui-navigate-right' href="javascript:;">
+						<div id="massage" class="mui-media-body">
+							<span class="mui-icon mui-icon-chat" style="color: #f52d6c;"></span>&nbsp;&nbsp;私信
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a class="mui-navigate-right">
+						<div id="zan" class="mui-media-body">
+							<span class="mui-icon-extra mui-icon-extra-like" style="color: #f52d6c;"></span>&nbsp;&nbsp;赞
+						</div>
+					</a>
+				</li>
+			</ul>
+			
+		</div>
+	</div>
+	<div class="footer mui-bar footer-ul">
+			<a id="index" class="footer-li">
+				<span class="mui-icon mui-icon-home"></span>
+				<span class="mui-tab-label">首页</span>
+			</a>
+			<a id="find" class="footer-li">
+				<span class="mui-icon mui-icon-search"></span>
+				<span class="mui-tab-label">发现</span>
+			</a>
+			<a id="mine" class="footer-li   mui-active">
+				<span class="mui-icon mui-icon-person"></span>
+				<span class="mui-tab-label">我</span>
+			</a>
+	</div>	
+<script src="js/mui.js"></script>
+<script type="text/javascript">
+			mui.init({
+				swipeBack:true //启用右滑关闭功能
+			});
+			//主页跳转
+			document.getElementById('index').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'index.html', //目标页面的url
+					show:{
+						aniShow:'zoom-out',//zoom-out
+						duration:0
+					},
+					waiting:{
+						autoShow:false
+					}
+				})
+			})
+			document.getElementById('find').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'index-find.html', //目标页面的url
+					show:{
+						aniShow:'zoom-out',//zoom-out
+						duration:0
+					},
+					waiting:{
+						autoShow:false
+					}
+				})
+			})
+			//设置
+			document.getElementById('setting').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'setting.html', //目标页面的url
+					show:{
+						aniShow:'slide-in-right',//zoom-out
+						duration:500
+					},
+					waiting:{
+						autoShow:false
+					}
+				})
+			})
+					
+			//赞
+			document.getElementById('zan').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'zan.html', //目标页面的url
+					show:{
+						aniShow:'slide-in-right',//zoom-out
+						duration:500
+					},
+					waiting:{
+						autoShow:false
+					}
+				})
+			})
+			//评论
+			document.getElementById('comment').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'comment.html', //目标页面的url
+					show:{
+						aniShow:'slide-in-right',//zoom-out
+						duration:500
+					},
+					waiting:{
+						autoShow:false
+					}
+				})
+			})
+			//私信
+			document.getElementById('massage').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'massage.html', //目标页面的url
+					show:{
+						aniShow:'slide-in-right',//zoom-out
+						duration:500
+					},
+					waiting:{
+						autoShow:false
+					}
+				})
+			})
+			//关注
+			document.getElementById('follow').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'follow.html', //目标页面的url
+					show:{
+						aniShow:'slide-in-right',//zoom-out
+						duration:500
+					},
+					waiting:{
+						autoShow:false
+					}
+				})
+			})
+			//粉丝
+			document.getElementById('fans').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'fans.html', //目标页面的url
+					show:{
+						aniShow:'slide-in-right',//zoom-out
+						duration:500
+					},
+					waiting:{
+						autoShow:false
+					}
+				})
+			})
+			//会员中心
+			document.getElementById('member').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'member.html', //目标页面的url
+					show:{
+						aniShow:'slide-in-right',//zoom-out
+						duration:500
+					},
+					waiting:{
+						autoShow:false
+					}
+				})
+			})
+			//收藏
+			document.getElementById('collect').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'collect.html', //目标页面的url
+					show:{
+						aniShow:'slide-in-right',//zoom-out
+						duration:500
+					},
+					waiting:{
+						autoShow:false
+					}
+				})
+			})
+			//下载
+			document.getElementById('download').addEventListener('tap',function(){
+				mui.openWindow({
+					url:'download.html', //目标页面的url
+					show:{
+						aniShow:'slide-in-right',//zoom-out
+						duration:500
+					},
+					waiting:{
+						autoShow:false
+					}
+				})
+			})
+		</script>		
+</body>
+</html>
